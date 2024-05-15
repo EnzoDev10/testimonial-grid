@@ -13,10 +13,67 @@
   font-weight: 600;
   font-style: normal;
 }
+body {
+  color: hsl(0, 0%, 81%);
+  height: 100vh;
+  width: 100vw;
+  padding: 80px 20px;
+  display: grid;
+  gap: 30px;
+}
+body .container {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body .container .profile {
+  display: flex;
+  gap: 20px;
+}
+body .container .profile img {
+  height: 2.5rem;
+  border: hsl(0, 0%, 81%) 2px solid;
+  border-radius: 100%;
+}
+body .container .profile .profile-text {
+  display: flex;
+  flex-direction: column;
+}
+body .container .profile .profile-text span {
+  opacity: 50%;
+}
+body .container .principal {
+  font-size: 1.4rem;
+}
+body .container .secondary {
+  opacity: 70%;
+}
+.container-one {
+  background: url(images/bg-pattern-quotation.svg) hsl(263, 55%, 52%);
+  background-repeat: no-repeat;
+  background-position: right 25px top 0px;
+}
+.container-two {
+  background-color: hsl(217, 19%, 35%);
+}
+.container-three {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.container-four {
+  background-color: hsl(219, 29%, 14%);
+}
+.container-fifth {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(263, 55%, 52%);
 }

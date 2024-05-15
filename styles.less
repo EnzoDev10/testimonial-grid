@@ -10,30 +10,97 @@
 @Light-grayish-blue: hsl(210, 46%, 95%);
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 .barlow-semi-condensed-medium {
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .barlow-semi-condensed-semibold {
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.barlow-semi-condensed-semibold {
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+body {
+    color: @Light-gray;
+    height: 100vh;
+    width: 100vw;
+    padding: 80px 20px;
+    display: grid;
+    gap: 30px;
+
+
+    .container {
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 22px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .profile {
+            display: flex;  
+            gap: 20px;
+
+            img {
+                height: 2.5rem;
+                border: @Light-gray 2px solid;
+                border-radius: 100%;
+            }
+
+            .profile-text {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    opacity: 50%;
+                }
+            }
+        }
+
+        .principal {
+            font-size: 1.4rem;   
+        }
+
+        .secondary {
+            opacity: 70%;
+        }
+    }
+}
+
+.container-one {
+	background: url(images/bg-pattern-quotation.svg) @Moderate-violet;
+    background-repeat: no-repeat;
+    background-position: right 25px top 0px;
+}
+.container-two {
+	background-color: @Very-dark-grayish-blue;
+}
+.container-three {
+	background-color: @White;
+    color: @Very-dark-grayish-blue;
+}
+.container-four {
+	background-color: @Very-dark-blackish-blue;
+}
+
+.container-fifth {
+	background-color: @White;
+    color: @Very-dark-grayish-blue;
+}
 
 .attribution {
 	font-size: 11px;
 	text-align: center;
+
+	a {
+		color: @Moderate-violet;
+	}
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
-}
-
-
-
