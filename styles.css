@@ -13,101 +13,60 @@
   font-weight: 600;
   font-style: normal;
 }
-.border-shadow {
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 6px;
-}
-.grid-container {
-  color: hsl(0, 0%, 81%);
+body {
   background-color: hsl(210, 46%, 95%);
-  height: 100vh;
-  width: 100vw;
-  padding: 30px;
+  font-size: 13px;
+  color: hsl(210, 46%, 95%);
+}
+body .grid-container {
+  padding: 40px 20px;
   display: grid;
-  gap: 30px;
   justify-content: center;
-  overflow-x: hidden;
 }
-.grid-container .container {
+body .grid-container .card {
   border-radius: 10px;
-  padding: 20px;
   max-width: 400px;
+  min-width: 300px;
+  margin-bottom: 20px;
+  padding: 30px;
+}
+body .grid-container .card .header {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  align-items: center;
 }
-.grid-container .container .profile {
-  display: flex;
-  gap: 20px;
+body .grid-container .card .header .card__img {
+  margin-right: 15px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: hsl(263, 55%, 70%) 2px solid;
 }
-.grid-container .container .profile img {
-  height: 2.5rem;
-  border: hsl(0, 0%, 81%) 2px solid;
-  border-radius: 100%;
-}
-.grid-container .container .profile .profile-text {
-  display: flex;
-  flex-direction: column;
-}
-.grid-container .container .profile .profile-text span {
+body .grid-container .card .header p {
   opacity: 50%;
 }
-.grid-container .container .principal {
+body .grid-container .card .card__lead {
   font-size: 1.4rem;
+  margin: 15px 0;
 }
-.grid-container .container .secondary {
-  font-size: 14px;
+body .grid-container .card .card__quote {
   opacity: 70%;
 }
-.container-one {
+body .grid-container .card__bg_purple {
   background: url(images/bg-pattern-quotation.svg) hsl(263, 55%, 52%);
   background-repeat: no-repeat;
-  background-position: right 25px top 0px;
+  background-position: top 0 right 30px;
 }
-.container-two {
+body .grid-container .card__bg_gray {
   background-color: hsl(217, 19%, 35%);
 }
-.container-three {
-  background-color: hsl(0, 0%, 100%);
+body .grid-container .card__bg_white {
   color: hsl(217, 19%, 35%);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 6px;
 }
-.container-four {
+body .grid-container .card__bg_darkblue {
   background-color: hsl(219, 29%, 14%);
 }
-.container-fifth {
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(217, 19%, 35%);
-}
 .attribution {
-  font-size: 13px;
   text-align: center;
   margin: 20px 0;
-}
-.attribution a {
-  color: hsl(263, 55%, 52%);
-}
-@media screen and (min-width: 1024px) {
-  .grid-container {
-    grid-template-areas: "one one one two five" "three four four four five";
-    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
-    justify-content: stretch;
-  }
-  .grid-container .container {
-    max-width: none;
-  }
-  .grid-container .container-one {
-    grid-area: one;
-    background-position: right 100px top 0px;
-  }
-  .grid-container .container-two {
-    grid-area: two;
-  }
-  .grid-container .container-three {
-    grid-area: three;
-  }
-  .grid-container .container-four {
-    grid-area: four;
-  }
-  .grid-container .container-fifth {
-    grid-area: five;
-  }
 }

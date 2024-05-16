@@ -1,5 +1,6 @@
 // Primary
 @Moderate-violet: hsl(263, 55%, 52%);
+@border-color: hsl(263, 55%, 70%);
 @Very-dark-grayish-blue: hsl(217, 19%, 35%);
 @Very-dark-blackish-blue: hsl(219, 29%, 14%);
 @White: hsl(0, 0%, 100%);
@@ -27,129 +28,71 @@
 	font-style: normal;
 }
 
-.border-shadow {
-	box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 6px;
-}
-
-.grid-container {
-	color: @Light-gray;
+body {
 	background-color: @Light-grayish-blue;
-	height: 100vh;
-	width: 100vw;
-	padding: 30px;
-	display: grid;
-	gap: 30px;
-	justify-content: center;
-	overflow-x: hidden;
+	font-size: 13px;
+	color: @Light-grayish-blue;
 
-	.container {
-		border-radius: 10px;
-		padding: 20px;
-		max-width: 400px;
+	.grid-container {
+		padding: 40px 20px;
+		display: grid;
+		justify-content: center;
 
-		display: flex;
-		flex-direction: column;
-		gap: 25px;
+		.card {
+			border-radius: 10px;
+			max-width: 400px;
+			min-width: 300px;
+			margin-bottom: 20px;
+			padding: 30px;
 
-		.profile {
-			display: flex;
-			gap: 20px;
-
-			img {
-				height: 2.5rem;
-				border: @Light-gray 2px solid;
-				border-radius: 100%;
-			}
-
-			.profile-text {
+			.header {
 				display: flex;
-				flex-direction: column;
+				align-items: center;
 
-				span {
+				.card__img {
+					margin-right: 15px;
+					border-radius: 50%;
+					width: 40px;
+					height: 40px;
+					border: @border-color 2px solid;
+				}
+				p {
 					opacity: 50%;
 				}
 			}
+
+			.card__lead {
+				font-size: 1.4rem;
+				margin: 15px 0;
+			}
+
+			.card__quote {
+				opacity: 70%;
+			}
 		}
 
-		.principal {
-			font-size: 1.4rem;
+		.card__bg_purple {
+			background: url(images/bg-pattern-quotation.svg) @Moderate-violet;
+			background-repeat: no-repeat;
+			background-position: top 0 right 30px;
 		}
 
-		.secondary {
-			font-size: 14px;
-			opacity: 70%;
+		.card__bg_gray {
+			background-color: @Very-dark-grayish-blue;
+		}
+
+		.card__bg_white {
+			color: @Very-dark-grayish-blue;
+			box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 6px;
+		}
+
+		.card__bg_darkblue {
+			background-color: @Very-dark-blackish-blue;
 		}
 	}
-}
-
-.container-one {
-	background: url(images/bg-pattern-quotation.svg) @Moderate-violet;
-	background-repeat: no-repeat;
-	background-position: right 25px top 0px;
-}
-.container-two {
-	background-color: @Very-dark-grayish-blue;
-}
-.container-three {
-	background-color: @White;
-	color: @Very-dark-grayish-blue;
-}
-.container-four {
-	background-color: @Very-dark-blackish-blue;
-}
-
-.container-fifth {
-	background-color: @White;
-	color: @Very-dark-grayish-blue;
 }
 
 .attribution {
-
-	font-size: 13px;
 	text-align: center;
 	margin: 20px 0;
-
-	a {
-		color: @Moderate-violet;
-	}
-}
-
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1024px) {
-	.grid-container {
-		grid-template-areas:
-			"one one one two five"
-			"three four four four five";
-
-		grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
-		justify-content: stretch;
-
-		.container {
-			max-width: none;
-			
-		}
-
-		.container-one {
-			grid-area: one;
-			background-position: right 100px top 0px;
-		}
-
-		.container-two {
-			grid-area: two;
-		}
-
-		.container-three {
-			grid-area: three;
-		}
-
-		.container-four {
-			grid-area: four;
-		}
-
-		.container-fifth {
-			grid-area: five;
-		}
-	}
 }
