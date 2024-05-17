@@ -71,6 +71,15 @@ body .grid-container .card__bg_darkblue {
 .attribution {
   text-align: center;
   margin-bottom: 20px;
+  color: hsl(219, 29%, 14%);
+  font-size: 16px;
+}
+.attribution a {
+  color: hsl(263, 55%, 52%);
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: hsl(263, 55%, 30%);
 }
 @media screen and (min-width: 1200px) {
   body {

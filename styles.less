@@ -1,5 +1,6 @@
 // Primary
 @Moderate-violet: hsl(263, 55%, 52%);
+@link-color: hsl(263, 55%, 30%);
 @border-color: hsl(263, 55%, 70%);
 @Very-dark-grayish-blue: hsl(217, 19%, 35%);
 @Very-dark-blackish-blue: hsl(219, 29%, 14%);
@@ -97,7 +98,18 @@ body {
 .attribution {
 	text-align: center;
 	margin-bottom: 20px;
+	color: @Very-dark-blackish-blue;
+	font-size: 16px;
 
+	a {
+		color: @Moderate-violet;
+		text-decoration: none;	
+		
+		&:hover {
+			color:@link-color;
+		}
+	}
+	
 }
 
 @media screen and (min-width: 1200px) {
